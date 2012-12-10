@@ -1,6 +1,6 @@
 var express = require('express');
 var mongoose = require('mongoose');
-var db = mongoose.createConnection('mongodb://localhost/mos');
+var db = mongoose.createConnection('mongodb://heroku_app9889853:yesgoody2013@ds045137.mongolab.com:45137/heroku_app9889853');
 var app = express.createServer();
 
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -23,7 +23,7 @@ var OrderSchema = new mongoose.Schema({
 var Order = db.model('Order', OrderSchema);
 
 app.get('/', function(request, response) {
-  response.send('main page');
+  response.send('main page powered by cloud9');
 });
 app.get('/list', function(req, res) {
 	return Order.find(function(err, orders){
@@ -52,12 +52,8 @@ app.post('/api', function(req, res){
 		res.json(testJson);
 		var order = new Order(JSON.parse(d));
 		order.save(function (err) {
-		  if (!err) {
-			  console.log("created!");
-		  }
-		  else{
-		  	console.log("saving error");
-		  }
+		  if (!err){ console.log("created!");}
+		  else{console.log("saving error");}
 		});
 	});
 });
