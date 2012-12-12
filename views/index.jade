@@ -1,0 +1,53 @@
+.container
+    .page-header
+        h1 MOS demo
+    table.table.table-striped
+        thead
+            tr
+                th utc
+                th type
+                th price
+        tbody
+            each d in data
+                tr
+                    td #{d.utc}
+                    td #{d.type}
+                    td #{d.price}
+
+    form(action="/", method="post", id="order").form-horizontal
+
+        .control-group
+        label.control-label customer
+        .controls
+            input(type="text", name="customerID", value="1")
+    
+        .control-group
+        label.control-label merchant
+        .controls
+            input(type="text", name="merchantID", value="1")
+
+        .control-group
+        label.control-label details
+        .controls
+            textarea(name="details") pizza:1,coke:2
+    
+        .control-group
+        label.control-label price
+        .controls
+            input(type="text", name="price", value="12.4")
+        .control-group
+            input(type="submit", value="Order").btn.btn-primary
+    
+    script(type='text/javascript')
+        $("#order").submit(function(event) {
+            /* stop form from submitting normally */
+            event.preventDefault(); 
+            var $form = $( this );
+            console.log(JSON.stringify($form.serializeArray()));
+            $.post( "/", {jsonData: JSON.stringify($form.serializeArray())}, 
+                function(ret){
+                    console.log(ret);
+                    location.reload();
+                }
+            );
+        });
