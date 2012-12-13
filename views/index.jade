@@ -1,18 +1,7 @@
 .container
     .page-header
         h1 MOS demo
-    table.table.table-striped
-        thead
-            tr
-                th utc
-                th type
-                th price
-        tbody
-            each d in data
-                tr
-                    td #{d.utc}
-                    td #{d.type}
-                    td #{d.price}
+    table#list.table
 
     form(action="/", method="post", id="order").form-horizontal
 
@@ -50,4 +39,31 @@
                     location.reload();
                 }
             );
+        });
+        $("document").ready(function(){
+            d3.json("/list", function(data){
+                var tr = d3.select("#list")
+                    .selectAll("order")
+                    .data(data)
+                    .enter()
+                    .append("tr")
+                    .attr("id", function(d){return d._id;});
+                tr.append("td").text(function(d){return d.utc;});
+                tr.append("td").text(function(d){return d.type;});
+                tr.append("td").text(function(d){return "$"+d.price;});
+                tr.append("td")
+                    .append("btn")
+                    .attr("class", "btn btn-link")
+                    .append("i")
+                    .attr("class", "icon-remove")
+                    .on("click", function(d){
+                        $.get("/remove", {id:d._id}, function(dd){
+                            console.log("remove"+dd._id);
+                            $("tr#"+dd._id).fadeOut("slow");
+                        });
+                    });
+                tr.on("click", function(d){
+                    console.log(d);
+                });
+            });
         });

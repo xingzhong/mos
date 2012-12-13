@@ -253,3 +253,23 @@
 {"ts":1355345240598,"patch":[[{"diffs":[[0,"});\n});\n"],[1,"\n"],[0,"app.post"]],"start1":1281,"start2":1281,"length1":16,"length2":17}]],"length":3651,"saved":false}
 {"ts":1355345292644,"patch":[[{"diffs":[[0,"GET\""],[-1,", data:orders"],[0,"} );"]],"start1":1214,"start2":1214,"length1":21,"length2":8}]],"length":3638,"saved":false}
 {"ts":1355345295288,"patch":[[{"diffs":[[0,"pe:\"GET\""],[1,", data:orders"],[0,"} );\n\t\t}"]],"start1":1210,"start2":1210,"length1":16,"length2":29}]],"length":3651,"saved":false}
+{"ts":1355345370182,"patch":[[{"diffs":[[0,"GET\""],[-1,", data:orders"],[0,"} );"]],"start1":1214,"start2":1214,"length1":21,"length2":8}]],"length":3638,"saved":false}
+{"ts":1355348253067,"patch":[[{"diffs":[[0,"}\n\t});\n});\n\n"],[1,"app.get('/list', function(req, res) {\n    return Order.find(function(err, orders){\n\t\tif(!err){\n\t\t\treturn res.send(orders);\n\t\t}\n\t\telse{\n\t\t\treturn console.log(err);\n\t\t}\n\t});\n});\n\n"],[0,"var testJson"]],"start1":2987,"start2":2987,"length1":24,"length2":201}]],"length":3815,"saved":false}
+{"ts":1355348256137,"patch":[[{"diffs":[[0,"}\n\t});\n});\n\napp."],[-1,"ge"],[1,"pos"],[0,"t('/list', funct"]],"start1":2987,"start2":2987,"length1":34,"length2":35}]],"length":3816,"saved":false}
+{"ts":1355348260452,"patch":[[{"diffs":[[0,");\n});\n\napp."],[-1,"pos"],[1,"ge"],[0,"t('/list', f"]],"start1":2991,"start2":2991,"length1":27,"length2":26}]],"length":3815,"saved":false}
+{"ts":1355348264132,"patch":[[{"diffs":[[0,"\n});\n\napp.get('/"],[-1,"list"],[1,"remove"],[0,"', function(req,"]],"start1":2993,"start2":2993,"length1":36,"length2":38}]],"length":3817,"saved":false}
+{"ts":1355348273039,"patch":[[{"diffs":[[0,"req, res) {\n"],[1,"    \n"],[0,"    return O"]],"start1":3027,"start2":3027,"length1":24,"length2":29}]],"length":3822,"saved":false}
+{"ts":1355348445344,"patch":[[{"diffs":[[0,"eturn Order.find"],[1,"ById"],[0,"(function(err, o"]],"start1":3049,"start2":3049,"length1":32,"length2":36}]],"length":3826,"saved":false}
+{"ts":1355348457563,"patch":[[{"diffs":[[0,"indById("],[1,"id, "],[0,"function"]],"start1":3062,"start2":3062,"length1":16,"length2":20}]],"length":3830,"saved":false}
+{"ts":1355348461005,"patch":[[{"diffs":[[0," res) {\n    "],[1,"var id = re"],[0,"\n    return "]],"start1":3031,"start2":3031,"length1":24,"length2":35}]],"length":3841,"saved":false}
+{"ts":1355348462275,"patch":[[{"diffs":[[0," id = re"],[1,"q."],[0,"\n    ret"]],"start1":3046,"start2":3046,"length1":16,"length2":18}]],"length":3843,"saved":false}
+{"ts":1355348487457,"patch":[[{"diffs":[[0,"d = req."],[1,"param"],[0,"\n    ret"]],"start1":3048,"start2":3048,"length1":16,"length2":21}]],"length":3848,"saved":false}
+{"ts":1355348493168,"patch":[[{"diffs":[[0,"eq.param"],[1,"(\"id\")"],[0,"\n    ret"]],"start1":3053,"start2":3053,"length1":16,"length2":22}]],"length":3854,"saved":false}
+{"ts":1355348494658,"patch":[[{"diffs":[[0,"am(\"id\")"],[1,";"],[0,"\n    ret"]],"start1":3059,"start2":3059,"length1":16,"length2":17}]],"length":3855,"saved":false}
+{"ts":1355348678703,"patch":[[{"diffs":[[0,"s){\n\t\tif(!err){\n"],[1,"            console.log(id)\n"],[0,"\t\t\treturn res.se"]],"start1":3118,"start2":3118,"length1":32,"length2":60}]],"length":3883,"saved":false}
+{"ts":1355348679406,"patch":[[{"diffs":[[0,".log(id)"],[1,";"],[0,"\n\t\t\tretu"]],"start1":3153,"start2":3153,"length1":16,"length2":17}]],"length":3884,"saved":false}
+{"ts":1355348739564,"patch":[[{"diffs":[[0,"ole.log("],[-1,"id"],[1,"orders"],[0,");\n\t\t\tre"]],"start1":3150,"start2":3150,"length1":18,"length2":22}]],"length":3888,"saved":false}
+{"contributors":[],"silentsave":false,"ts":1355348794832,"patch":[[{"diffs":[[0,"rders);\n"],[1,"            orders.remove(function(err){\n                if(!err)\n            })\n"],[0,"\t\t\tretur"]],"start1":3159,"start2":3159,"length1":16,"length2":97}]],"length":3969,"saved":false}
+{"ts":1355348802339,"patch":[[{"diffs":[[0,"if(!err)"],[1,"{\n                    console.log(\"remove\")\n                }"],[0,"\n       "]],"start1":3224,"start2":3224,"length1":16,"length2":77}]],"length":4030,"saved":false}
+{"ts":1355348810536,"patch":[[{"diffs":[[0,"(\"remove"],[-1,"\""],[1," \"+orders.id"],[0,")\n      "]],"start1":3265,"start2":3265,"length1":17,"length2":28}]],"length":4041,"saved":false}
+{"ts":1355348830678,"patch":[[{"diffs":[[0,"move"],[-1," \"+orders.id)"],[1,"\");\n                }\n                else{\n                    console.log(\"error remove\");\n                    console.log(err);"],[0,"\n   "]],"start1":3269,"start2":3269,"length1":21,"length2":138}]],"length":4158,"saved":false}

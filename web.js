@@ -45,7 +45,7 @@ var Order = db.model('Order', OrderSchema);
 app.get('/', function(request, response) {
     Order.find(function(err, orders){
         if(!err){
-			response.render( 'index.jade', {title:"xingzhong", type:"GET", data:orders} );
+			response.render( 'index.jade', {title:"xingzhong", type:"GET"} );
 		}
 		else{
 			return console.log(err);
@@ -107,6 +107,28 @@ app.post('/order', function(request, response) {
 app.get('/list', function(req, res) {
 	return Order.find(function(err, orders){
 		if(!err){
+			return res.send(orders);
+		}
+		else{
+			return console.log(err);
+		}
+	});
+});
+
+app.get('/remove', function(req, res) {
+    var id = req.param("id");
+    return Order.findById(id, function(err, orders){
+		if(!err){
+            console.log(orders);
+            orders.remove(function(err){
+                if(!err){
+                    console.log("remove");
+                }
+                else{
+                    console.log("error remove");
+                    console.log(err);
+                }
+            })
 			return res.send(orders);
 		}
 		else{
