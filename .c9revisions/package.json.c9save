@@ -10,3 +10,13 @@
 {"ts":1355193454731,"patch":[[{"diffs":[[0,"x\",\n"],[-1,"    \"jade\":\"\", \"*\",\n"],[0,"\t\"mo"]],"start1":90,"start2":90,"length1":28,"length2":8}]],"length":229,"saved":false}
 {"ts":1355193711144,"patch":[[{"diffs":[[0,"9.6-7\",\n"],[1,"    \"jade\" : \">=0.27.7\"\n"],[0,"\t\"connec"]],"start1":112,"start2":112,"length1":16,"length2":40}]],"length":253,"saved":false}
 {"ts":1355193714584,"patch":[[{"diffs":[[0,"e\" : \">="],[1," "],[0,"0.27.7\"\n"]],"start1":128,"start2":128,"length1":16,"length2":17}]],"length":254,"saved":false}
+{"contributors":[],"silentsave":false,"ts":1355360336404,"patch":[[{"diffs":[[0,"ongoose\""],[-1," "],[0,": \">= 3."]],"start1":169,"start2":169,"length1":17,"length2":16}]],"length":253,"saved":false}
+{"ts":1355360413694,"patch":[[{"diffs":[[0,".7\"\n"],[-1,"\t\"connect\": \"1.8.5\",\n"],[0,"\t\"mo"]],"start1":141,"start2":141,"length1":29,"length2":8}]],"length":232,"saved":false}
+{"ts":1355360415843,"patch":[[{"diffs":[[0," 0.27.7\""],[1,","],[0,"\n\t\"mongo"]],"start1":136,"start2":136,"length1":16,"length2":17}]],"length":233,"saved":false}
+{"ts":1355360420222,"patch":[[{"diffs":[[0," 0.27.7\""],[1,"m\n\t\"connect\": \"1.8.5\""],[0,",\n\t\"mong"]],"start1":136,"start2":136,"length1":16,"length2":37}]],"length":254,"saved":false}
+{"ts":1355360421047,"patch":[[{"diffs":[[0," 0.27.7\""],[-1,"m"],[1,","],[0,"\n\t\"conne"]],"start1":136,"start2":136,"length1":17,"length2":17}]],"length":254,"saved":false}
+{"ts":1355360461847,"patch":[[{"diffs":[[0,"7\",\n"],[-1,"\t\"connect\": \"1.8.5\",\n"],[0,"\t\"mo"]],"start1":142,"start2":142,"length1":29,"length2":8}]],"length":233,"saved":false}
+{"ts":1355360628711,"patch":[[{"diffs":[[0,"= 0."],[-1,"27.7"],[1,"15.4"],[0,"\",\n\t"]],"start1":135,"start2":135,"length1":12,"length2":12}]],"length":233,"saved":false}
+{"ts":1355360842387,"patch":[[{"diffs":[[0,"\">= 3.4\""],[1,","],[0,"\n  },\n  "]],"start1":159,"start2":159,"length1":16,"length2":17}]],"length":234,"saved":false}
+{"ts":1355361127255,"patch":[[{"diffs":[[0,"= 3.4\",\n"],[1,"    \"connect\" : \">= 2.7,1\"\n"],[0,"  },\n  \""]],"start1":161,"start2":161,"length1":16,"length2":43}]],"length":261,"saved":false}
+{"ts":1355361128463,"patch":[[{"diffs":[[0," \">= 2.7"],[-1,","],[1,"."],[0,"1\"\n  },\n"]],"start1":184,"start2":184,"length1":17,"length2":17}]],"length":261,"saved":false}
