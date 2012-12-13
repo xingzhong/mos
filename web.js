@@ -17,10 +17,11 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var db = mongoose.createConnection('mongodb://yesgoody_test:yesgoody2013@ds045137.mongolab.com:45137/heroku_app9889853');
-var app = express.createServer();
+var app = express();
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/../public'));
 app.use(express.bodyParser());
+
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
