@@ -113,7 +113,7 @@ app.get('/list', function(req, res) {
 		else{
 			return console.log(err);
 		}
-	});
+	}).limit(20);
 });
 
 app.get('/remove', function(req, res) {

@@ -20,3 +20,4 @@
 {"ts":1355360842387,"patch":[[{"diffs":[[0,"\">= 3.4\""],[1,","],[0,"\n  },\n  "]],"start1":159,"start2":159,"length1":16,"length2":17}]],"length":234,"saved":false}
 {"ts":1355361127255,"patch":[[{"diffs":[[0,"= 3.4\",\n"],[1,"    \"connect\" : \">= 2.7,1\"\n"],[0,"  },\n  \""]],"start1":161,"start2":161,"length1":16,"length2":43}]],"length":261,"saved":false}
 {"ts":1355361128463,"patch":[[{"diffs":[[0," \">= 2.7"],[-1,","],[1,"."],[0,"1\"\n  },\n"]],"start1":184,"start2":184,"length1":17,"length2":17}]],"length":261,"saved":false}
+{"contributors":[],"silentsave":false,"ts":1355369555746,"patch":[[{"diffs":[[0,"ress\": \""],[1,">= "],[0,"2.5.x\",\n"]],"start1":78,"start2":78,"length1":16,"length2":19}]],"length":264,"saved":false}
