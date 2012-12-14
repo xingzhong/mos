@@ -3,31 +3,38 @@ block content
   .container
     .page-header
         h1 MOS demo
+    
+    
+    .row
+        .span6
+            form(action="/", method="post", id="order").form-horizontal
+                .control-group
+                label.control-label customer
+                .controls
+                    input(type="text", name="customerID", value="1")
+            
+                .control-group
+                label.control-label merchant
+                .controls
+                    input(type="text", name="merchantID", value="1")
+        
+                .control-group
+                label.control-label details
+                .controls
+                    textarea(name="details") pizza:1,coke:2
+            
+                .control-group
+                label.control-label price
+                .controls
+                    input(type="text", name="price", value="12.4")
+                .control-group
+                .controls
+                    input(type="submit", value="Order").btn.btn-primary
+        
+        #chart.span5
+        #legend.span1
+
     table#list.table
-
-    form(action="/", method="post", id="order").form-horizontal
-        .control-group
-        label.control-label customer
-        .controls
-            input(type="text", name="customerID", value="1")
-    
-        .control-group
-        label.control-label merchant
-        .controls
-            input(type="text", name="merchantID", value="1")
-
-        .control-group
-        label.control-label details
-        .controls
-            textarea(name="details") pizza:1,coke:2
-    
-        .control-group
-        label.control-label price
-        .controls
-            input(type="text", name="price", value="12.4")
-        .control-group
-        .controls
-            input(type="submit", value="Order").btn.btn-primary
     
     script(type='text/javascript')
         $("#order").submit(function(event) {
@@ -67,5 +74,57 @@ block content
                 tr.on("click", function(d){
                     console.log(d);
                 });
+                var vizData1 = [];
+                var vizData2 = [];
+                var vizData3 = [];
+                data.forEach( function(d, i){
+                    vizData1.push({x:i, y:d.price});
+                    d.data.details.forEach(function(d){
+                        if (d.item == "coke"){
+                            vizData2.push({x:i, y:d.num});
+                        }
+                        else if (d.item == "pizza"){
+                            vizData3.push({x:i, y:d.num});
+                        }
+                    });
+                    
+                });
+                var palette = new Rickshaw.Color.Palette();
+                var graph = new Rickshaw.Graph( {
+                    element: document.querySelector("#chart"),
+                    width: 400,
+                    height: 200,
+                    renderer: 'bar',
+                    series: [ {
+                                color: palette.color(),
+                                name: 'price',
+                                data: vizData1,
+                            },
+                            {
+                                color: palette.color(),
+                                name: 'coke',
+                                data: vizData2,
+                            },
+                            {
+                                color: palette.color(),
+                                name: 'pizza',
+                                data: vizData3,
+                            },
+                        ]
+                } );
+                var hoverDetail = new Rickshaw.Graph.HoverDetail( {
+                    graph: graph,
+                    xFormatter: function(x) { return "#"+x;  },
+                } );
+                console.log(vizData1);
+                console.log(vizData2);
+                var legend = new Rickshaw.Graph.Legend({
+                    graph: graph,
+                    element: document.querySelector('#legend')
+                });
+                graph.renderer.unstack = true;
+                graph.render();
             });
+
+            
         });

@@ -4,14 +4,6 @@
     Apache v2 Licence 
     Xingzhong Xu xu@yesgoody.com
     yesgoody inc.
-    
-    roadmap
-    1. data collector supports post and read
-        POST /order 
-        GET /order
-    2. form to trigger the order
-        GET /
-        POST /
 */
 
 var express = require('express');
